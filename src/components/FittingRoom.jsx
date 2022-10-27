@@ -1,6 +1,7 @@
 import React from 'react'
 import Clothes from './Clothes'
 import Measurements from './Measurements'
+import Avatar from "./avatar/avatar"
 
 export default function FittingRoom() {
   return (
@@ -10,7 +11,8 @@ export default function FittingRoom() {
         The more fields filled out, the more accurate the fitting room can be!
       </p>
       <div className='fitting-room'>
-        <div className='silhouette'>Silhouette</div>
+        <Avatar></Avatar>
+        {/* <div className='silhouette'>Silhouette</div> */}
         <div className='clothing'>
           <div>
             <Clothes />
