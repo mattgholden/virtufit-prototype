@@ -18,6 +18,7 @@ function Avatar(props) {
   const [newTorsoWidth, setNewTorsoWidth] = useState({});
   const [newLegHeight, setNewLegHeight] = useState("37");
   const [newLegWidth, setNewLegWidth] = useState({});
+  const [toggle, setToggle] = useState(false);
 
   const user = {
     height: parseInt(loggedHeight),
@@ -66,18 +67,38 @@ function Avatar(props) {
     console.log(user);
   }
 
+
+
+  function handleGender(e) {
+    let top = document.getElementById("topTorso")
+    let bottom = document.getElementById("bottomTorso")
+    if (toggle == false) {
+      top.classList.add("femaleUpperTorso")
+      bottom.classList.add("femaleBottomTorso")
+      e.target.innerText = "Female"
+      e.target.style.background = "pink";
+    } else {
+      top.classList.remove("femaleUpperTorso")
+      bottom.classList.remove("femaleBottomTorso")
+      e.target.innerText = "Male"
+      e.target.style.background = "#53fdfd";
+    }
+    setToggle((prevCheck) => !prevCheck);
+  }
+
   return (
     <div className="avatarComponentWrap">
       <div className="avatarTopHalf">
       <div className="avatarContainer">
         <div className="topHalf">
-          <div id="top" className="upperTorso" style={torsoHeight}></div>
+          <div id="topTorso" className="upperTorso" style={torsoHeight}></div>
         </div>
         <div className="bottomHalf">
-          <div id="bottom" className="bottomTorso" style={legHeight}></div>
+          <div id="bottomTorso" className="bottomTorso" style={legHeight}></div>
         </div>
       </div>
-      <div className="jeansSelectCards">
+        <div className="jeansSelectCards">
+          <button id="genderButton" onClick={handleGender}>Male</button>
           Height:
           <input type="range" min="60" max="76" onChange={handleHeight}></input>
           {loggedHeight}

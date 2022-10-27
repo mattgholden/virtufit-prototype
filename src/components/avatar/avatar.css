@@ -40,26 +40,31 @@
   }
   
   .upperTorso{
-    /* border: 1px solid black; */
-    background-image: url("./human2.png");
-    /* background-position-x: ; */
-    background-position: center -180%;
-    background-size: 100%;
     background-repeat: no-repeat;
-    /* filter: drop-shadow(0px 0px 3px rgb(34, 34, 34)); */
     opacity: .7;
+    background-size: 100%;
+    background-image: url("./male.png");
+    background-position: center -165%;
+  }
+  .femaleUpperTorso{
+    background-size: 90%;
+    background-image: url("./female.png");
+    background-position: center -165%;
   }
   
   .bottomTorso{
-    /* border: 1px solid black; */
-    background-image: url("./human2.png");
-    background-position: center 1640%;
-    background-size: 100%;
     background-repeat: no-repeat;
-    /* filter: drop-shadow(0px 0px 3px #222); */
     opacity: .7;
-    /* transform: scaleX(1); */
+    background-size: 100%;
+    background-image: url("./male.png");
+    background-position: center 1000%;
   }
+  .femaleBottomTorso{
+    background-size: 90%;
+    background-image: url("./female.png");
+    background-position: center 1150%;
+  }
+
   .jeansSelectCards{
     display: flex;
     border: 5px solid rgb(221, 221, 221);
@@ -99,4 +104,18 @@
   }
   .odd{
     background-color: rgb(240, 237, 237);
+  }
+
+  #genderButton{
+    width: 50%;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    background-color: #53fdfd;
+    transition: background-color .2s;
+  }
+  
+  .femaleButton{
+    background-color: pink;
   }
