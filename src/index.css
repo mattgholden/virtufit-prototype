@@ -52,6 +52,10 @@ navbar {
   justify-content: space-between;
 }
 
+.logo {
+  width: 120px;
+}
+
 .right-nav {
   display: flex;
 }

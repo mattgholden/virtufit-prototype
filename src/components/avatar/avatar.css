@@ -1,121 +1,125 @@
-.avatarComponentWrap{
+.avatarComponentWrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1vh;
-  }
-  .avatarTopHalf{
-    display: flex;
-    flex-direction: row;
-    gap: 1vh;
-  }
-  .avatarContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 5px solid rgb(221, 221, 221);
-    width: 30vh;
-    height: 50vh;
-    flex-direction: column;
-    border-radius: 10px;
-    background-image: linear-gradient(to bottom, rgb(250, 249, 249),rgb(243, 243, 244));
-  }
-  
-  .topHalf{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 50%;
-    width: 100%;
-    /* border: 1px solid blue; */
-  }
-  .bottomHalf{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 50%;
-    width: 100%;
-    /* border: 1px solid blue; */
-  }
-  
-  .upperTorso{
-    background-repeat: no-repeat;
-    opacity: .7;
-    background-size: 100%;
-    background-image: url("./male.png");
-    background-position: center -165%;
-  }
-  .femaleUpperTorso{
-    background-size: 90%;
-    background-image: url("./female.png");
-    background-position: center -165%;
-  }
-  
-  .bottomTorso{
-    background-repeat: no-repeat;
-    opacity: .7;
-    background-size: 100%;
-    background-image: url("./male.png");
-    background-position: center 1000%;
-  }
-  .femaleBottomTorso{
-    background-size: 90%;
-    background-image: url("./female.png");
-    background-position: center 1150%;
-  }
+}
+.avatarTopHalf {
+  display: flex;
+  flex-direction: row;
+  gap: 1vh;
+}
+.avatarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid rgb(221, 221, 221);
+  width: 30vh;
+  height: 50vh;
+  flex-direction: column;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(250, 249, 249),
+    rgb(243, 243, 244)
+  );
+}
 
-  .jeansSelectCards{
-    display: flex;
-    border: 5px solid rgb(221, 221, 221);
-    border-radius: 10px;
-    height: 50vh;
-    width: 20vh;
-    /* top: 10%; */
-    background-color: rgb(255, 255, 255);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 5;
-    /* position: absolute; */
-    /* transform: scaleX(1); */
-  }
-  .userStats{
-    display: flex;
-    border: 5px solid rgb(221, 221, 221);
-    border-radius: 10px;
-    height: 15vh;
-    width: 52vh;
-    background-color: rgb(255, 255, 255);
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    z-index: 5;
-    overflow: hidden;
-  }
+.topHalf {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 50%;
+  width: 100%;
+  /* border: 1px solid blue; */
+}
+.bottomHalf {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 50%;
+  width: 100%;
+  /* border: 1px solid blue; */
+}
 
-  .stats{
-    display: flex;
-    width: 100%;
-    height: 25%;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 10px;
-  }
-  .odd{
-    background-color: rgb(240, 237, 237);
-  }
+.upperTorso {
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  background-size: 100%;
+  background-image: url('./male.png');
+  background-position: center -165%;
+}
+.femaleUpperTorso {
+  background-size: 90%;
+  background-image: url('./female.png');
+  background-position: center -165%;
+}
 
-  #genderButton{
-    width: 50%;
-    height: fit-content;
-    padding: 10px;
-    border-radius: 25px;
-    border: none;
-    background-color: #53fdfd;
-    transition: background-color .2s;
-  }
-  
-  .femaleButton{
-    background-color: pink;
-  }
+.bottomTorso {
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  background-size: 100%;
+  background-image: url('./male.png');
+  background-position: center 1000%;
+}
+.femaleBottomTorso {
+  background-size: 90%;
+  background-image: url('./female.png');
+  background-position: center 1150%;
+}
+
+.jeansSelectCards {
+  display: flex;
+  border: 5px solid rgb(221, 221, 221);
+  border-radius: 10px;
+  height: 50vh;
+  width: 20vh;
+  /* top: 10%; */
+  background-color: rgb(255, 255, 255);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  /* position: absolute; */
+  /* transform: scaleX(1); */
+}
+.userStats {
+  display: flex;
+  border: 5px solid rgb(221, 221, 221);
+  border-radius: 10px;
+  height: 15vh;
+  width: 52vh;
+  background-color: rgb(255, 255, 255);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.stats {
+  display: flex;
+  width: 100%;
+  height: 25%;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+}
+.odd {
+  background-color: rgb(240, 237, 237);
+}
+
+#genderButton {
+  width: 50%;
+  height: fit-content;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  background-color: #53fdfd;
+  transition: background-color 0.2s;
+}
+
+.femaleButton {
+  background-color: pink;
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '../assets/levis-logo.png'
 
 export default function Navbar() {
   return (
@@ -9,7 +10,7 @@ export default function Navbar() {
         <li>SECONDHAND</li>
       </ul>
       <div>
-        <img src='#' alt='Logo' />
+        <img className='logo' src={logo} alt='Logo' />
       </div>
       <div className='right-nav'>
         <div className='search-bar'>
