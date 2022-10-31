@@ -1,5 +1,5 @@
 import React from 'react'
 
-export default function Article() {
-  return <div className='article'>Article</div>
+export default function Article(props) {
+  return <div className='article'>{props.Clothes}</div>
 }

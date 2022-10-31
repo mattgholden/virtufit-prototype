@@ -2,6 +2,7 @@ import React from 'react'
 import logo from '../assets/levis-logo.png'
 
 export default function Navbar() {
+
   return (
     <navbar>
       <ul className='links'>

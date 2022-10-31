@@ -1,28 +1,63 @@
+.avatarPage{
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  align-items: flex-end;
+  justify-content: flex-end;
+  right: 0;
+  top:0;
+  background-color: white;
+  position: absolute;
+  height: 100vh;
+  gap: 1vh;
+  border: 1px solid black;
+  transition: all .5s;
+}
+.avatarLogo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: red;
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  top: 20px;
+  left: calc(50% - 50px);
+  
+}
 .avatarComponentWrap {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-end;
   gap: 1vh;
+  /* position:absolute; */
+  height: 100vh;
+  /* border: 1px solid black; */
+  width: fit-content;
+  margin-bottom: 5px;
+  /* background-color: rgb(255, 255, 255); */
+ 
 }
 .avatarTopHalf {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 1vh;
 }
 .avatarContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 5px solid rgb(221, 221, 221);
-  width: 30vh;
-  height: 50vh;
+  border: 1px solid rgb(221, 221, 221);
+  width: 60vh;
+  height: 60vh;
   flex-direction: column;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   background-image: linear-gradient(
     to bottom,
-    rgb(250, 249, 249),
-    rgb(243, 243, 244)
+    rgb(248, 246, 246),
+    rgb(245, 245, 247)
   );
 }
 
@@ -57,11 +92,16 @@
 }
 
 .bottomTorso {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* border: 1px solid red; */
   background-repeat: no-repeat;
   opacity: 0.7;
   background-size: 100%;
   background-image: url('./male.png');
   background-position: center 1000%;
+  overflow: visible;
 }
 .femaleBottomTorso {
   background-size: 90%;
@@ -71,19 +111,20 @@
 
 .jeansSelectCards {
   display: flex;
-  border: 5px solid rgb(221, 221, 221);
-  border-radius: 10px;
-  height: 50vh;
-  width: 20vh;
-  /* top: 10%; */
-  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(221, 221, 221);
+  height: 30vh;
+  width: 60vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(248, 246, 246),
+    rgb(245, 245, 247)
+  );
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 5;
-  /* position: absolute; */
-  /* transform: scaleX(1); */
 }
+
 .userStats {
   display: flex;
   border: 5px solid rgb(221, 221, 221);
@@ -111,7 +152,7 @@
 }
 
 #genderButton {
-  width: 50%;
+  width: 10vh;
   height: fit-content;
   padding: 10px;
   border-radius: 25px;
@@ -122,4 +163,82 @@
 
 .femaleButton {
   background-color: pink;
+}
+
+.clothesSelectionTable{
+  display: flex;
+  width: 60vh;
+  height: calc(91vh + 2px);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(248, 246, 246),
+    rgb(245, 245, 247)
+    );
+    margin-bottom: 5px;
+border: 1px solid rgb(221, 221, 221);
+justify-content: center;
+align-items: center;
+overflow: scroll;
+}
+
+.pants{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 44%;
+  height: 50%;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: .5;
+  /* margin-top: -10px; */
+}
+
+.leftLeg{
+  transform-origin: top;
+  /* transform: rotate(1deg); */
+  height: 100%;
+  width: 50%;
+  background-color: rgb(32, 166, 255);
+  border-radius: 1px;
+}
+.rightLeg{
+  transform-origin: top;
+  /* transform: rotate(-1deg); */
+  height: 100%;
+  background-color: rgb(32, 166, 255);
+  width: 50%;
+  border-radius: 1px;
+}
+
+.arrow-down {
+  position:absolute;
+  width: 0; 
+  height: 0; 
+  border-left: calc(30px) solid transparent;
+  border-right: calc(30px) solid transparent; 
+  border-top: calc(4vh) solid rgb(32, 166, 255, .7);
+}
+
+.pantsTable{
+  display: flex;
+  width: 55vh;
+  height: 30vh;
+  /* border: 1px solid blue; */
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  overflow: scroll;
+}
+
+.avatarArticle{
+  display: flex;
+  /* border: 1px solid blue; */
+  background-color: rgb(215, 215, 215);
+  justify-content: center;
+  align-items: center;
+  width: 20vh;
+  height: 20vh;
+  color: white;
 }
