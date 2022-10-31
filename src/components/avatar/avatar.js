@@ -22,6 +22,9 @@ function Avatar(props) {
   const [newTorsoWidth, setNewTorsoWidth] = useState({})
   const [newLegHeight, setNewLegHeight] = useState('37')
   const [newLegWidth, setNewLegWidth] = useState({})
+  const [waistError, setWaistError] = useState("")
+  const [thighError, setThighError] = useState("")
+
   const [toggle, setToggle] = useState(false)
   const user = {
     height: parseInt(loggedHeight),
@@ -49,7 +52,7 @@ function Avatar(props) {
       transform: `scaleX(${parseInt(scale) / 30})`,
     })
     setLoggedHeight(`${e.target.value}`)
-    console.log(user)
+    // console.log(user)
   }
   function handleWidth(e) {
     // console.log(e.target.value);
@@ -65,7 +68,7 @@ function Avatar(props) {
       transform: `scaleX(${parseInt(scale) / 30})`,
     })
     setLoggedWidth(`${e.target.value}`)
-    console.log(user)
+    // console.log(user)
   }
   function handleGender(e) {
     let top = document.getElementById('topTorso')
@@ -92,13 +95,17 @@ function Avatar(props) {
   function compareSize(e) {
     console.log(e.target.dataset.waist)
     // console.log(user.waist)
+    setThighError("")
+    setWaistError("")
     let waist = parseInt(e.target.dataset.waist)
     let thigh = parseInt(e.target.dataset.thigh)
     if (loggedWidth > waist) {
       console.log(`Waist too tight, try something ${loggedWidth - waist} sizes up`)
+      setWaistError(`Waist too tight, try something ${loggedWidth - waist} sizes up`)
     }
     if ((loggedWidth * 0.75) > thigh) {
       console.log("A little tight on the thighs")
+      setThighError("A little tight on the thighs")
     }
 
   }
@@ -144,7 +151,10 @@ function Avatar(props) {
     <div className='avatarComponentWrap'>
       <div className='avatarTopHalf'>
           <div className='avatarContainer'>
-            
+            <div className='errorContainer'>
+            <div className='error'>{waistError}</div>
+              <div>{thighError}</div>
+              </div>
               <div className='topHalf'>
                 <div id='topTorso' className='upperTorso' style={torsoHeight}></div>
               </div>
@@ -190,14 +200,6 @@ function Avatar(props) {
         <div className='pantsTable'>
           {dummyData.map((data) => 
             <div onClick={compareSize } className='avatarArticle' data-thigh={data.Thigh} data-size={data.Size} data-waist={data.Waist} data-seat={data.seat} >{data.Clothes}</div>
-            // "Clothes": "Boot-Cut Jeans",
-            // "Inseam Length": 34,
-            // "Leg Opening": 15,
-            // "Rise": 10.5,
-            // "Seat": 42.5,
-            // "Size": 34,
-            // "Thigh": 24,
-            // "Waist": 35.5
           )}
         </div>
         <div></div>

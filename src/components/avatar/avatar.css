@@ -242,3 +242,18 @@ overflow: scroll;
   height: 20vh;
   color: white;
 }
+
+.errorContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  position: absolute;
+  left: 0;
+  height: 40vh;
+  width: 20vh;
+  color: red;
+  margin-left: 10px;
+  /* border: 1px solid blue; */
+}
