@@ -3,6 +3,9 @@ import Clothes from './Clothes'
 import Measurements from './Measurements'
 import Avatar from "./avatar/avatar"
 import Article from './Article'
+import Top from './Top'
+import Bottoms from './Bottoms'
+import AlsoTry from './AlsoTry'
 import { useState } from 'react'
 
 export default function FittingRoom() {
@@ -145,8 +148,16 @@ function handleVF() {
             <Article Clothes={data.Clothes} />
             
             )}
-         
         </div>
+        <div>
+            <Top />
+          </div>
+          <div>
+            <Bottoms />
+          </div>
+          <div>
+            <AlsoTry/>
+          </div>
       </div>
       {/* <Measurements /> */}
     </>

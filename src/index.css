@@ -5,13 +5,21 @@
   height: 50vh;
 }
 
-.article {
+/* .article {
   border: 1px solid black;
   border-radius: 1rem;
   width: 15vh;
   height: 20vh;
   margin: 0;
   padding: 0;
+} */
+
+.article_button {
+  border: 1px solid black;
+  border-radius: 1rem;
+  width: 2rem;
+  height: 2vh;
+  margin: 2px;
 }
 
 .fitting-room {
@@ -49,6 +57,10 @@ body {
 .x {
   display: flex;
   justify-content: space-between;
+  max-height: 200px;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: whitesmoke;
 }
 
 .x > * {
